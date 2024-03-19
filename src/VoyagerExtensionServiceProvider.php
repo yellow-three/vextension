@@ -16,8 +16,8 @@ class VoyagerExtensionServiceProvider extends ServiceProvider
         /*
          * Optional methods to load your package assets
          */
-        // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'voyager-extension');
-        // $this->loadViewsFrom(__DIR__.'/../resources/views', 'voyager-extension');
+        // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'vextension');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'vextension');
         // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         $this->loadRoutesFrom(__DIR__.'/../routes/routes.php');
 
@@ -28,17 +28,17 @@ class VoyagerExtensionServiceProvider extends ServiceProvider
 
             // Publishing the views.
             /*$this->publishes([
-                __DIR__.'/../resources/views' => resource_path('views/vendor/voyager-extension'),
+                __DIR__.'/../resources/views' => resource_path('views/vendor/vextension'),
             ], 'views');*/
 
             // Publishing assets.
             /*$this->publishes([
-                __DIR__.'/../resources/assets' => public_path('vendor/voyager-extension'),
+                __DIR__.'/../resources/assets' => public_path('vendor/vextension'),
             ], 'assets');*/
 
             // Publishing the translation files.
             /*$this->publishes([
-                __DIR__.'/../resources/lang' => resource_path('lang/vendor/voyager-extension'),
+                __DIR__.'/../resources/lang' => resource_path('lang/vendor/vextension'),
             ], 'lang');*/
 
             // Registering package commands.

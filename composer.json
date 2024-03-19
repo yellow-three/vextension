@@ -5,7 +5,7 @@
         "yellow-three",
         "voyager-extension"
     ],
-    "homepage": "https://github.com/yellow-three/voyager-extension",
+    "homepage": "https://github.com/yellow-three/vextension",
     "license": "MIT",
     "type": "library",
     "authors": [
