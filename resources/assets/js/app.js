@@ -1,7 +1,8 @@
-//import FilePond from 'filepond';
+import * as FilePond from 'filepond';
+window.FilePond=FilePond;
+//import 'jquery-filepond/filepond.jquery';
 import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
 import filepond_tr_TR from 'filepond/locale/tr-tr.js';
-import 'jquery-filepond/filepond.jquery';
 
 const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
@@ -15,7 +16,7 @@ const options = {
     //maxFileSize: '2MB',
     //maxTotalFileSize: null,
     server: {
-        url: '/filepond/api', process: '/process', revert: '/process', patch: "?patch=", headers: {
+        url: '/admin/vextension/filepond', process: '/process', revert: '/process', patch: "?patch=", headers: {
             'X-CSRF-TOKEN': csrfToken
         }
     },
@@ -23,9 +24,10 @@ const options = {
 
 FilePond.registerPlugin(FilePondPluginImagePreview);
 
-//FilePond.setOptions(filepond_tr_TR);
+FilePond.setOptions(filepond_tr_TR);
 FilePond.setOptions(options);
 
-
-//$.fn.filepond.setOptions(filepond_tr_TR);
-//$.fn.filepond.registerPlugin(FilePondPluginImagePreview);
+// $('document').ready(function () {
+//     $.fn.filepond.setOptions(options);
+// $.fn.filepond.registerPlugin(FilePondPluginImagePreview);
+// })
