@@ -1,8 +1,8 @@
 # Very short description of the package
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/yellow-three/voyager-extension.svg?style=flat-square)](https://packagist.org/packages/yellow-three/voyager-extension)
-[![Total Downloads](https://img.shields.io/packagist/dt/yellow-three/voyager-extension.svg?style=flat-square)](https://packagist.org/packages/yellow-three/voyager-extension)
-![GitHub Actions](https://github.com/yellow-three/voyager-extension/actions/workflows/main.yml/badge.svg)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/yellow-three/vextension.svg?style=flat-square)](https://packagist.org/packages/yellow-three/vextension)
+[![Total Downloads](https://img.shields.io/packagist/dt/yellow-three/vextension.svg?style=flat-square)](https://packagist.org/packages/yellow-three/vextension)
+![GitHub Actions](https://github.com/yellow-three/vextension/actions/workflows/main.yml/badge.svg)
 
 This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
 
@@ -11,7 +11,7 @@ This is where your description should go. Try and limit it to a paragraph or two
 You can install the package via composer:
 
 ```bash
-composer require yellow-three/voyager-extension
+composer require yellow-three/vextension
 ```
 
 ## Usage

@@ -51,5 +51,7 @@
                 "VoyagerExtension": "YellowThree\\VoyagerExtension\\VoyagerExtensionFacade"
             }
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
