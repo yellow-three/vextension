@@ -53,6 +53,9 @@ class VoyagerExtensionServiceProvider extends ServiceProvider
      */
     public function register()
     {
+
+        $this->loadHelpers();
+
         // Automatically apply the package configuration
         $this->mergeConfigFrom($this->getConfigFile(), 'vextension');
 
@@ -73,5 +76,15 @@ class VoyagerExtensionServiceProvider extends ServiceProvider
     private function getConfigFile(): string
     {
         return __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'vextension.php';
+    }
+
+    /**
+     * Load helpers.
+     */
+    protected function loadHelpers()
+    {
+        foreach (glob(__DIR__.'/Helpers/*.php') as $filename) {
+            require_once $filename;
+        }
     }
 }

@@ -2,14 +2,16 @@
 
 use YellowThree\VoyagerExtension\Http\Controllers\FilePondController;
 
-Route::group(['prefix' => config('vextension.assets_path_prefix','admin/vextension')], function () {
+Route::group(['prefix' => config('vextension.assets_path_prefix','admin')], function () {
     Route::group(['as' => 'voyager.'], function () {
 
-        Route::prefix('filepond')->name('filepond.')->group(function () {
+        Route::prefix('vextension')->name('vextension.')->group(function () {
+            Route::prefix('filepond')->name('filepond.')->group(function () {
             Route::patch('/', [FilePondController::class, 'chunk'])->name('chunk');
             Route::post('/process', [FilePondController::class, 'upload'])->name('upload');
             Route::delete('/process', [FilePondController::class, 'delete'])->name('delete');
         });
+    });
 
         $namespacePrefix = '\YellowThree\VoyagerExtension\Http\Controllers\\';
         $extensionController = '\YellowThree\VoyagerExtension\Http\Controllers\VoyagerExtensionController';
